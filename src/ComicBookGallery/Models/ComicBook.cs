@@ -34,5 +34,9 @@ namespace ComicBookGallery.Models
                     .ToLower() + IssueNumber + ".jpg";
             }
         }
+
+
+
+
     }
 }
