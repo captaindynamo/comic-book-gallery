@@ -18,6 +18,14 @@ namespace ComicBookGallery.Controllers
             _comicBookRepository = new ComicBookRepository();
         }
 
+        public ActionResult Index()
+        {
+            var comicBooks = _comicBookRepository.GetComicBooks();
+
+            return View(comicBooks);
+        }
+
+
         //Defensive coding in case id type is null. MVC doesn't like potential /controller/action/id where id isn't nullable.
         //Because each comic book page becomes /ComicBook/Detail/<comicbook id>
 
